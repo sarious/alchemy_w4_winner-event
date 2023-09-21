@@ -1,9 +1,12 @@
 import { ethers } from "hardhat";
 
-const CONTRACT_ADDRESS = ""; // TODO: add the address of deployed contract;
+const DEPLOYED_AGENT_CONTRACT_ADDRESS = "0x..."; // TODO: add the address of deployed contract;
 
 async function main() {
-  const contract = await ethers.getContractAt("WinnerAgent", CONTRACT_ADDRESS);
+  const contract = await ethers.getContractAt(
+    "WinnerAgent",
+    DEPLOYED_AGENT_CONTRACT_ADDRESS
+  );
 
   const tx = await contract.callAttempt();
 
